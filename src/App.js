@@ -37,10 +37,11 @@ function Product(props){
     width: '350px',
     float: 'left'
   }
+  const {name, price} = props.product;
   return (
     <div style={productStyle}>
-      <h3>{props.product.name}</h3>
-      <h5>{props.product.price}</h5>
+      <h3>{name}</h3>
+      <h5>{price}</h5>
       <button>Buy Now</button>
     </div>
   )
