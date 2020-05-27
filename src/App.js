@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-const names = ['Iron man']  //Array 
+const names = ['Iron man', 'Bat Man', 'Speider Man', 'Captain A']  //Array 
 const produts = [                //Object
   {name: 'Photoshop', price: '$100'},
   {name: 'Illustrator', price: '$120'},
@@ -16,9 +16,18 @@ const produts = [                //Object
       <header className="App-header">
 
         <p>My first react paragraph</p>
-        {/* <Product name={produts[0].name} price={produts[0].price}></Product> //Pass one by one object element */}
-        <Product product={produts[0]}></Product>
-        <Product product={produts[1]}></Product>
+
+        <ul>
+          {
+            names.map(name => <li>{name}</li>)
+          }
+        </ul>
+
+        {
+          produts.map(product => <Product product={product}></Product> )
+        }
+
+        
         <Person name="Shahoriar" type="Man"></Person>
         <Person name={names[0]}></Person> {/*// Access by the value of an array  */}
         <Person></Person>
