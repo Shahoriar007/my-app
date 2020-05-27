@@ -18,7 +18,7 @@ const produts = [                //Object
         <p>My first react paragraph</p>
         {/* <Product name={produts[0].name} price={produts[0].price}></Product> //Pass one by one object element */}
         <Product product={produts[0]}></Product>
-
+        <Product product={produts[1]}></Product>
         <Person name="Shahoriar" type="Man"></Person>
         <Person name={names[0]}></Person> {/*// Access by the value of an array  */}
         <Person></Person>
