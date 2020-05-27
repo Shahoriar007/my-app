@@ -24,7 +24,7 @@ const produts = [                //Object
         </ul>
 
         {
-          produts.map(product => <Product product={product}></Product> )
+          produts.map(pd => <Product product={pd}></Product> )
         }
 
         
