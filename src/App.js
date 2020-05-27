@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
@@ -16,6 +16,8 @@ const produts = [                //Object
       <header className="App-header">
 
         <p>My first react paragraph</p>
+
+        <Counter></Counter>
 
         <ul>
           {
@@ -35,6 +37,19 @@ const produts = [                //Object
       </header>
     </div>
   );
+}
+
+function Counter(){
+  const [count, setCount] = useState(0);
+  const handleIncrease = () => setCount(count + 1);
+  const handleDecrease = () => setCount(count - 1);
+  return(
+    <div>
+      <h3>Count: {count} </h3>
+      <button onClick={handleDecrease}>Decrease</button>
+      <button onClick={handleIncrease}>Increase</button>
+    </div>
+  )
 }
 
 function Product(props){
@@ -72,5 +87,7 @@ function Person(props){
     </div>
   )
 }
+
+
 
 export default App;
